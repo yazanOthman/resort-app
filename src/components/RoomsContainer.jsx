@@ -5,7 +5,7 @@ import Loading from "./Loading";
 import { ResortContext } from "../components/ResortContext";
 
 export default function RoomsContainer() {
-  const { rooms, sortedRooms, loading } = useContext(ResortContext);
+  const { sortedRooms, loading } = useContext(ResortContext);
 
   if (loading) {
     return <Loading />;
@@ -13,8 +13,7 @@ export default function RoomsContainer() {
 
   return (
     <div>
-      RoomsContainer
-      <RoomsFilter rooms={rooms} />
+      <RoomsFilter />
       <RoomsList rooms={sortedRooms} />
     </div>
   );
